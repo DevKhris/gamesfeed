@@ -1,12 +1,15 @@
-import NavBar from "./components/NavBar"
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <header>
         <NavBar />
-      
-    </div>
+      </header>
+      <main className="bg-white dark:bg-slate-900"></main>
+    </>
   );
 }
 
 export default App;
+

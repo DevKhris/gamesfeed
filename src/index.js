@@ -1,10 +1,10 @@
-import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
-import './assets/styles/app.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./assets/styles/app.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById("root"));
 
 root.render(
   <StrictMode>
@@ -16,3 +16,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

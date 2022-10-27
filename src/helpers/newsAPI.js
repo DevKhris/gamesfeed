@@ -1,7 +1,7 @@
 import { request } from "axios";
 
 const apiUrl = "https://videogames-news2.p.rapidapi.com/videogames_news";
-export function getNews() {
+export function getNews(setError) {
   const options = {
     method: "GET",
     url: `${apiUrl}/recent`,
@@ -14,11 +14,12 @@ export function getNews() {
   return request(options)
     .then(({ data }) => data)
     .catch(function (error) {
+      setError(error.message);
       console.error(error);
     });
 }
 
-export function searchNews(query) {
+export function searchNews(query, setError) {
   const options = {
     method: "GET",
     url: `${apiUrl}/search_news`,
@@ -33,5 +34,6 @@ export function searchNews(query) {
     .then(({ data }) => data)
     .catch(function (error) {
       console.error(error);
+      setError(error.message);
     });
 }

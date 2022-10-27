@@ -10,6 +10,11 @@ function App() {
       <div className="container">
         <NewsPage />
       </div>
+      <footer className="h-auto">
+        <div className="p-5">
+          <p className="text-center dark:text-white">Developed by DevKhris</p>
+        </div>
+      </footer>
     </div>
   );
 }

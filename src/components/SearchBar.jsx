@@ -4,13 +4,13 @@ function SearchBar(props) {
   let query = "";
 
   const handleSearch = (query) => {
-    searchNews(query)
+    searchNews(query, props.setError)
       .then((result) => {
         props.setNews(result);
       })
       .catch((err) => {
-        props.setError(err);
-        console.log(err);
+        props.setNews([]);
+        props.setError(err.message);
       });
   };
 
@@ -27,7 +27,6 @@ function SearchBar(props) {
           className="p-2 transition-all border-none rounded bg-slate-300 hover:border-2 hover:border-solid text-slate-800 dark:text-white dark:bg-slate-800 dark:hover:border-blue-700 w-50 hover:border-orange-300"
           onChange={(e) => {
             query = e.target.value;
-            console.log(query);
           }}
         ></input>
         <span>

@@ -3,7 +3,7 @@ import NewsPage from "./pages/NewsPage";
 
 function App() {
   return (
-    <div className="bg-inherit">
+    <div className="flex flex-col justify-between min-h-screen dark:bg-slate-900">
       <header className="header-area">
         <NavBar />
       </header>

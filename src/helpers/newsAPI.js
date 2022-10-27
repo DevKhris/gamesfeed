@@ -6,7 +6,7 @@ export function getNews() {
     method: "GET",
     url: `${apiUrl}/recent`,
     headers: {
-      "X-RapidAPI-Key": "54d792eaf5msha89db865474f599p19dbcfjsn5406307a8833",
+      "X-RapidAPI-Key": process.env.REACT_APP_NEWS_API_KEY,
       "X-RapidAPI-Host": "videogames-news2.p.rapidapi.com",
     },
   };
@@ -24,7 +24,7 @@ export function searchNews(query) {
     url: `${apiUrl}/search_news`,
     params: { query: query },
     headers: {
-      "X-RapidAPI-Key": "54d792eaf5msha89db865474f599p19dbcfjsn5406307a8833",
+      "X-RapidAPI-Key": process.env.REACT_APP_SEARCH_API_KEY,
       "X-RapidAPI-Host": "videogames-news2.p.rapidapi.com",
     },
   };

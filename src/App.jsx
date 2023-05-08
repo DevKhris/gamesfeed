@@ -12,7 +12,7 @@ function App() {
       </div>
       <footer className="h-auto">
         <div className="p-5">
-          <p className="text-center dark:text-white">2022 &copy;</p>
+          <p className="text-center dark:text-white">2022 DevKhris &copy;</p>
         </div>
       </footer>
     </div>
